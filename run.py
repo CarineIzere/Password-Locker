@@ -106,7 +106,7 @@ def main():
                                     "To generate random password enter keyword 'gp' or 'n' to create your own password")
                                 keyword = input().lower()
                                 if keyword == 'gp':
-                                    account_password = random.randint(111111, 1111111)
+                                    account_password = random.randint(000000, 0000000)
                                     print(f"Account: {account_name}")
                                     print(f"Password: {account_password}")
                                     print('\n')
@@ -251,7 +251,7 @@ def main():
                                 "To generate random password enter keyword 'gp' or 'n' to create your own password")
                             keyword = input().lower()
                             if keyword == 'gp':
-                                account_password = random.randint(111111, 1111111)
+                                account_password = random.randint(000000, 0000000)
                                 print(f"Account: {account_name}")
                                 print(f"Password: {account_password}")
                                 print('\n')
