@@ -1,6 +1,6 @@
-import unittest #Importing the unittest module
-from credentials import Credentials # Importing the contact class
-import pyperclip
+import unittest
+from credentials import Credentials
+
 
 class TestCredentials(unittest.TestCase):
     """Test class that defines test cases for the Credentials class behavior
@@ -8,19 +8,12 @@ class TestCredentials(unittest.TestCase):
 
     def setUp(self):
         """Set up method to run befor before each test case"""
-        self.new_credentials = Credentials("", "", "", "", "", "", "","Yahoo", "00000")
+        self.new_credentials = Credentials("Facebook", "12345")
 
     def test_credentials_instance(self):
         """Method that tests whether the new_credentials have been instantiated correctly"""
-        self.assertEqual(self.new_credentials.account_Fname, "carine")
-        self.assertEqual(self.new_credentials.account_Lname, "Izere")
-        self.assertEqual(self.new_credentials.accchmod +x run.pyount_Gender, "Female")
-        self.assertEqual(self.new_credentials.accchmod +x run.pyount_Address, "Kigali")
-        self.assertEqual(self.new_credentials.accchmod +x run.pyount_e_mail, "camariange@yahoo.fr")
-        self.assertEqual(self.new_credentials.account_Nationality, "Rwanda")
-        self.assertEqual(self.new_credentials.account_Status, "married")
-        self.assertEqual(self.new_credentials.account_user_name, "Yahoo")
-        self.assertEqual(self.new_credentials.account_password, "00000")
+        self.assertEqual(self.new_credentials.account_name, "Facebook")
+        self.assertEqual(self.new_credentials.account_password, "12345")
 
     def test_save_credentials(self):
         """Method that tests whether the new credential created has been saved"""
@@ -30,23 +23,23 @@ class TestCredentials(unittest.TestCase):
     def test_save_multiple_credentials(self):
         """Method that saves multiple credentials to credentials_list"""
         self.new_credentials.save_credentials()
-        new_test_credential = Credentials("", "", "", "", "", "", "", "Facebook", "0000")
+        new_test_credential = Credentials("Twitter", "56789")
         new_test_credential.save_credentials()
-        self.assertEqual(len(Credentials.credentials_list), 9)
+        self.assertEqual(len(Credentials.credentials_list), 2)
 
     def tearDown(self):
         """Method that clears the credentials_list after every test to ensure that there is no error"""
         Credentials.credentials_list = []
 
-    def test_find_credential_by_user_name(self):
+    def test_find_credential_by_name(self):
         """Test to check if we can find credentials and display information"""
         self.new_credentials.save_credentials()
-        new_test_credential = Credentials(("", "", "", "", "", "", "", "Facebook", "0000")
+        new_test_credential = Credentials("Twitter", "56789")
         new_test_credential.save_credentials()
 
-        found_credential = Credentials.find_by_user_name("Facebook")
+        found_credential = Credentials.find_by_name("Twitter")
 
-        self.assertEqual(found_credential.account_user_name, new_test_credential.account_user_name)
+        self.assertEqual(found_credential.account_name, new_test_credential.account_name)
 
     def test_display_all_credentials(self):
         """TestCase to test whether all contacts can be displayed"""
