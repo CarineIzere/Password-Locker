@@ -214,8 +214,8 @@ def main():
             default_user_password = input()
             print('\n')
 
-            while default_user_name != 'testuser' or default_user_password != '12345':
-                print("Wrong userName or password. Username 'testuser' and password '12345'")
+            while default_user_name != 'testuser' or default_user_password != '00000':
+                print("Wrong userName or password. Username 'testuser' and password '00000'")
                 print("Enter UserName")
                 default_user_name = input()
 
@@ -224,10 +224,10 @@ def main():
 
                 print('\n')
 
-            if default_user_name == 'testuser' and default_user_password == '12345':
+            if default_user_name == 'testuser' and default_user_password == '00000':
                 print("YOU HAVE SUCCESSFULLY LOGGED IN!")
                 print('\n')
-                print("Select an option below to continue: Enter 1, 2, 3, 4 or 5")
+                print("Select an option below to continue: Enter 0, 0, 0, 0 or 0")
                 print('\n')
 
             while True:
