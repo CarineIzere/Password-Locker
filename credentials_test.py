@@ -8,7 +8,7 @@ class TestCredentials(unittest.TestCase):
 
     def setUp(self):
         """Set up method to run befor before each test case"""
-        self.new_credentials = Credentials("Facebook", "00000")
+        self.new_credentials = Credentials("", "", "", "", "", "", "","Izere", "00000")
 
     def test_credentials_instance(self):
         """Method that tests whether the new_credentials have been instantiated correctly"""
@@ -30,7 +30,7 @@ class TestCredentials(unittest.TestCase):
     def test_save_multiple_credentials(self):
         """Method that saves multiple credentials to credentials_list"""
         self.new_credentials.save_credentials()
-        new_test_credential = Credentials("", "", "", "", "", "", "", "Izere", "0000")
+        new_test_credential = Credentials("", "", "", "", "", "", "", "Facebook", "0000")
         new_test_credential.save_credentials()
         self.assertEqual(len(Credentials.credentials_list), 9)
 
@@ -41,10 +41,10 @@ class TestCredentials(unittest.TestCase):
     def test_find_credential_by_user_name(self):
         """Test to check if we can find credentials and display information"""
         self.new_credentials.save_credentials()
-        new_test_credential = Credentials(("", "", "", "", "", "", "", "Twitter", "0000")
+        new_test_credential = Credentials(("", "", "", "", "", "", "", "Facebook", "0000")
         new_test_credential.save_credentials()
 
-        found_credential = Credentials.find_by_user_name("Twitter")
+        found_credential = Credentials.find_by_user_name("Facebook")
 
         self.assertEqual(found_credential.account_user_name, new_test_credential.account_user_name)
 
