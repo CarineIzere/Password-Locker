@@ -86,14 +86,14 @@ def main():
                     print('\n')
 
                 while True:
-                    print("1: View Your saved credentials")
-                    print("2: Add new credentials")
-                    print("3: Remove credentials")
-                    print("4: Search credentials")
-                    print("5: Log Out")
+                    print("a: View Your saved credentials")
+                    print("b: Add new credentials")
+                    print("c: Remove credentials")
+                    print("d: Search credentials")
+                    print("e: Log Out")
                     option = input()
 
-                    if option == '2':
+                    if option == 'b':
                         while True:
                             print("Continue to add? y/n")
 
@@ -126,7 +126,7 @@ def main():
                                 break
                             else:
                                 print("Please use 'y' for yes or 'n' for no!")
-                    elif option == '1':
+                    elif option == 'a':
                         while True:
                             print("Below is a list of all your credentials")
                             if display_credentials():
@@ -151,7 +151,7 @@ def main():
                                 print("Please Enter a valid code")
                                 continue
 
-                    elif option == '5':
+                    elif option == 'e':
                         print("WARNING! You will loose all your credentials if you log out. Are you sure? y/n")
                         logout = input().lower()
 
@@ -160,7 +160,7 @@ def main():
                             break
                         elif logout == 'n':
                             continue
-                    elif option == '3':
+                    elif option == 'c':
                         while True:
                             print("Search for credential to delete")
 
@@ -182,7 +182,7 @@ def main():
                                 print("That Contact Does not exist")
                                 break
 
-                    elif option == '4':
+                    elif option == 'd':
                         while True:
                             print("Continue? y/n")
                             option2 = input().lower()
@@ -206,7 +206,7 @@ def main():
                         continue
 
         elif short_code == 'lg':
-            print("WELCOME")
+            print("WELCOME TO YOUR ACCOUNT")
             print("Enter UserName")
             default_user_name = input()
 
