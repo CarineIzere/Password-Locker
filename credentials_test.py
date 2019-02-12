@@ -8,15 +8,15 @@ class TestCredentials(unittest.TestCase):
 
     def setUp(self):
         """Set up method to run befor before each test case"""
-        self.new_credentials = Credentials("Facebook", "12345")
+        self.new_credentials = Credentials("Facebook", "00000")
 
     def test_credentials_instance(self):
         """Method that tests whether the new_credentials have been instantiated correctly"""
         self.assertEqual(self.new_credentials.account_Fname, "carine")
         self.assertEqual(self.new_credentials.account_Lname, "Izere")
-        self.assertEqual(self.new_credentials.account_Gender, "Female")
-        self.assertEqual(self.new_credentials.account_Address, "Kigali")
-        self.assertEqual(self.new_credentials.account_e_mail, "carizeree@gmail.com")
+        self.assertEqual(self.new_credentials.accchmod +x run.pyount_Gender, "Female")
+        self.assertEqual(self.new_credentials.accchmod +x run.pyount_Address, "Kigali")
+        self.assertEqual(self.new_credentials.accchmod +x run.pyount_e_mail, "carizeree@gmail.com")
         self.assertEqual(self.new_credentials.account_Nationality, "Rwanda")
         self.assertEqual(self.new_credentials.account_Status, "married")
         self.assertEqual(self.new_credentials.account_user_name, "Izere")
