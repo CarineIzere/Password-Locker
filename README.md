@@ -56,7 +56,7 @@ visual studio code
 
 ## Contact Information
 
-    tel:+250783706421
+    tel:+250783706421 E_mail : carizeree@gmail.com
 
 ## Contribution
 

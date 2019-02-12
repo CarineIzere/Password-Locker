@@ -8,7 +8,7 @@ class TestCredentials(unittest.TestCase):
 
     def setUp(self):
         """Set up method to run befor before each test case"""
-        self.new_credentials = Credentials("", "", "", "", "", "", "","Izere", "00000")
+        self.new_credentials = Credentials("", "", "", "", "", "", "","Yahoo", "00000")
 
     def test_credentials_instance(self):
         """Method that tests whether the new_credentials have been instantiated correctly"""
@@ -16,10 +16,10 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_credentials.account_Lname, "Izere")
         self.assertEqual(self.new_credentials.accchmod +x run.pyount_Gender, "Female")
         self.assertEqual(self.new_credentials.accchmod +x run.pyount_Address, "Kigali")
-        self.assertEqual(self.new_credentials.accchmod +x run.pyount_e_mail, "carizeree@gmail.com")
+        self.assertEqual(self.new_credentials.accchmod +x run.pyount_e_mail, "camariange@yahoo.fr")
         self.assertEqual(self.new_credentials.account_Nationality, "Rwanda")
         self.assertEqual(self.new_credentials.account_Status, "married")
-        self.assertEqual(self.new_credentials.account_user_name, "Izere")
+        self.assertEqual(self.new_credentials.account_user_name, "Yahoo")
         self.assertEqual(self.new_credentials.account_password, "00000")
 
     def test_save_credentials(self):
