@@ -12,11 +12,16 @@ These are the behaviours/features that the application implements for use by a u
 
 ### As a user I would like:
 
-        To create an account with details - log in and password
+        To create an account - log in and password
         Store existing login credentials
         Generate a password for a new credential/account
         Copy credentials to the clipboard
-        Delete Account
+            Once logged in, you can:
+        1: View Your saved credentials.
+        2: Add new credentials.
+        3: Remove credentials.
+        4: Search credentials.
+        5: Log Out.
 
 ## SetUp / Installation Requirements
 
