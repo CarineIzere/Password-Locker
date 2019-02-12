@@ -3,7 +3,7 @@ class User:
 
         user_list = [] # Empty user list
 
-        def __init__(self, account_Fname, account_Lname, account_Gender, account_Address, account_e_mail, account_Nationality, account_Status, account_user_name, account_user_name, account_password):
+        def __init__(self, Fname, Lname, Gender, Address, e_mail, Nationality, Status, user_name, password):
 
             # docstring removed for simplicity
             self.Fname = Fname 
