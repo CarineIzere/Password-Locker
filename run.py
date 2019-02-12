@@ -5,9 +5,9 @@ from credentials import Credentials
 # Functions to add credentials
 
 
-def create_new_credential(account_Gender, account_Address, account_e_mail, account_Nationality, account_Status, account_user_name, account_user_name, account_password):
+def create_new_credential(account_name, account_password):
     """Function to create a new account and its credentials"""
-    new_credential = Credentials(account_Gender, account_Address, account_e_mail, account_Nationality, account_Status, account_user_name, account_user_name, account_password)
+    new_credential = Credentials(account_name, account_password)
     return new_credential
 
 
@@ -16,14 +16,14 @@ def save_new_credential(credentials):
     credentials.save_credentials()
 
 
-def find_credential(account_user_name):
-    """Function that finds credentials based on account_user_name given"""
-    return Credentials.find_by_name(account_user_name)
+def find_credential(account_name):
+    """Function that finds credentials based on account_name given"""
+    return Credentials.find_by_name(account_name)
 
 
-def check_existing_credentials(user_name):
-    """Method that checks whether a particular account and its credentials exist based on searched account_user_name"""
-    return Credentials.find_by_user_name(user_name)
+def check_existing_credentials(name):
+    """Method that checks whether a particular account and its credentials exist based on searched account_name"""
+    return Credentials.find_by_name(name)
 
 
 def display_credentials():
@@ -41,9 +41,9 @@ def delete_credential(credentials):
 def main():
 
     while True:
-        print("This is a PassWord Locker.")
+        print("Welcome to PassWord Locker.")
         print('\n')
-        print("Use these codes to select: Create New User use 'cu': Login to your account use 'lg' or 'ex' to exit password locker")
+        print("Use these short codes to select an option: Create New User use 'cu': Login to your account use 'lg' or 'ex' to exit password locker")
         short_code = input().lower()
         print('\n')
 
@@ -58,7 +58,7 @@ def main():
             confirm_password = input()
 
             while confirm_password != created_user_password:
-                print("Sorry you entered wrong password!")
+                print("Sorry your passwords did not match!")
                 print("Enter a password")
                 created_user_password = input()
                 print("Confirm Your Password")
@@ -88,7 +88,7 @@ def main():
                 while True:
                     print("1: View Your saved credentials")
                     print("2: Add new credentials")
-                    print("3: Delete credentials")
+                    print("3: Remove credentials")
                     print("4: Search credentials")
                     print("5: Log Out")
                     option = input()
@@ -99,7 +99,7 @@ def main():
 
                             choice = input().lower()
                             if choice == 'y':
-                                print("Enter The Account user Name")
+                                print("Enter The Account Name")
                                 account_name = input()
                                 print("Enter a password")
                                 print(
@@ -107,18 +107,18 @@ def main():
                                 keyword = input().lower()
                                 if keyword == 'gp':
                                     account_password = random.randint(111111, 1111111)
-                                    print(f"Account: {account_user_name}")
+                                    print(f"Account: {account_name}")
                                     print(f"Password: {account_password}")
                                     print('\n')
                                 elif keyword == 'n':
                                     print("Create your password")
                                     account_password = input()
-                                    print(f"Account: {account_user_name}")
+                                    print(f"Account: {account_name}")
                                     print(f"Password: {account_password}")
                                     print('\n')
 
                                 else:
-                                    print("Please enter a valid password")
+                                    print("Please enter a valid Code")
 
                                 save_new_credential(create_new_credential(
                                     account_name, account_password))
@@ -132,7 +132,7 @@ def main():
                             if display_credentials():
 
                                 for credential in display_credentials():
-                                    print(f"ACCOUNT NAME:{credential.account_user_name}")
+                                    print(f"ACCOUNT NAME:{credential.account_name}")
                                     print(f"PASSWORD:{credential.account_password}")
 
                             else:
@@ -214,8 +214,8 @@ def main():
             default_user_password = input()
             print('\n')
 
-            while default_user_name != 'testuser' or default_user_password != '00000':
-                print("Wrong userName or password. Username 'testuser' and password '00000'")
+            while default_user_name != 'testuser' or default_user_password != '12345':
+                print("Wrong userName or password. Username 'testuser' and password '12345'")
                 print("Enter UserName")
                 default_user_name = input()
 
@@ -224,10 +224,10 @@ def main():
 
                 print('\n')
 
-            if default_user_name == 'testuser' and default_user_password == '00000':
+            if default_user_name == 'testuser' and default_user_password == '12345':
                 print("YOU HAVE SUCCESSFULLY LOGGED IN!")
                 print('\n')
-                print("Select an option below to continue: Enter 0, 0, 0, 0 or 0")
+                print("Select an option below to continue: Enter 1, 2, 3, 4 or 5")
                 print('\n')
 
             while True:
