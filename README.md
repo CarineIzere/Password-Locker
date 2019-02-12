@@ -51,7 +51,7 @@ visual studio code
 
 ## copyright
 
-    ©2019 Carine Izere
+    ©2019 [Carine Izere]
 
 ## Contact Information
 
